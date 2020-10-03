@@ -1,12 +1,69 @@
+.header{
+    height: 65px;
+    width: 100%;
+    background-color: #004A80;
+}
 body{
     padding: 0;
     margin: 0;
 }
-#header{
-    width: 100%;
-    background-color: #004A80;
-    height: 65px;
-}
 .logo{
-    height: 38%;
+    padding-left: 15%;
+    width: 50%;
+    float: left;
+    height: 25px;
+}
+.logo img{
+    height: 25px;
+    margin-top: 20px;
+}
+.user-items{
+    float: right;
+    width: 5;
+    padding-right: 15%;
+}
+.user-items img{
+    width: 23px;
+    height: 23px;
+    margin-top: 21px;
+}
+.user-items img:first-child{
+    margin-right: 25px;
+}
+.footer{
+    height: 68px;
+    width: 100%;
+}
+.footer-info{
+    width: 85%;
+}
+.footer-links{
+    width: 15%;
+}
+/* Phone */
+@media (min-width: 320px) and (max-width: 480px) {
+    .logo{
+        padding-left: 5%;
+    }
+    .user-items{
+        padding-right: 5%;
+    }
+}
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px), (min-width: 481px) and (max-width: 767px), (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .logo{
+        padding-left: 2%;
+    }
+    .user-items{
+        padding-right: 2%;
+    }
+}
+/* Desktop */
+@media (min-width: 1024px) {
+    .logo{
+        padding-left: 15%;
+    }
+    .user-items{
+        padding-right: 15%;
+    }
 }
