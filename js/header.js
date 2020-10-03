@@ -1,5 +1,5 @@
 function header(){
-    let html = '<div><h1>Hi there</h1></div>';
+    var html = '<div></div>'
     document.getElementById('header').innerHTML = html
 }
 
