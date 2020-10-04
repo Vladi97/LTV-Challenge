@@ -17,16 +17,18 @@
 /* Phone */
 @media (min-width: 320px) and (max-width: 480px) {
     #footer{
-        display: block;
+        display: flex;
+        flex-direction: column;
     }
     #footer .about{
-        width: 90%;
-        font-size: 17px;
+        width: 85%;
+        font-size: 14.5px;
     }
     #footer .links{
         width: 100%;
         text-align: center;
         font-size: 14px;
+        margin-bottom: 5%;
     }
 }
 /* Tablet */

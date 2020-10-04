@@ -16,30 +16,40 @@
     width: 85%;
     margin-left: 8%;
 }
+.form-search-container .email-label{
+    height: 60x;
+    position: absolute;
+    left: 18.6%;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color:  #9B9B9B;
+    font-size: 12px;
+    margin-top: 35px;
+}
 .search-input{
     border: none;
     height: 60px;
     width: 60%;
-    font-size: 14px;
-    line-height: 18px;
-    padding-left: 10px;
+    font-size: 16px;
+    padding-left: 15px;
     border-radius: 3px;
     color: black;
     margin-left: 11%;
     outline: none;
-}
-.search-input::placeholder{
-    color:  #9B9B9B;
-    letter-spacing: 2px;
-    font-weight: bold;
+    line-height: 27px;
 }
 .search-input:focus{
     border-color: #F6BC25;
     border-style: groove;
     border-width: 2px;
 }
+.search-input:focus + .email-label{
+    transform: translateY(-100%);
+    left: 18.6%;
+}
 .search-button{
     border: none;
+    outline: none;
     height: 60px;
     background-image: linear-gradient(225deg, #F2DA56 0%, #F6BC25 100%);
     box-shadow: 0 3px 0 0 #A6953B, inset 0 1px 0 0 #FFFFFF;
@@ -47,6 +57,13 @@
     font-size: 22px;
     width: 15%;
     margin-left: 1%;
+    margin-top: 2px;
+}
+.search-button:hover{
+    background: #F2DA56;
+}
+.search-button:active{
+    background: #F6BC25;
 }
 #search .message-label-container{
     margin-left: 17.5%;
@@ -58,6 +75,7 @@
 }
 #search .message-label-container .icon img{
     margin-top: 0%;
+    transform: translateY(20%);
 }
 #search .message-label-container .label-message{
     width: 90%;
@@ -104,6 +122,9 @@
     #search .message-label-container .icon{
         width: 8%;
         margin-bottom: 15%;
+    }
+    #search .message-label-container .icon img{
+        transform: translateY(-70%);
     }
 }
 /* Tablet */

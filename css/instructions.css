@@ -17,14 +17,13 @@
 }
 #instructions .steps-container{
     width: 79.8%;
-    margin-left: 5%;
+    margin-left: 9.5%;
     display: table;
 }
 #instructions .steps-container .column{
     float: left;
     width: 50%;
     letter-spacing: 0;
-    display: table-cell;
 }
 #instructions .steps-container .column .step-title{
     font-size: 20px;
@@ -34,6 +33,7 @@
     font-size: 18.5px;
     line-height: 26px;
     width: 100%;
+    color: black;
 }
 .step-info{
     float: left;
@@ -59,6 +59,9 @@
 }
 /* Phone */
 @media (min-width: 320px) and (max-width: 359px) {
+    .steps-container{
+        width: 100%;
+    }
     #instructions .title-instructions-container .title{
         font-size: 37.5px;
         margin-top: 2%;
@@ -72,8 +75,9 @@
         line-height: 28px;
     }
     #instructions .steps-container .column{
-        width: 100%;
+        width: 280px;
         letter-spacing: 0;
+        float: none;
     }
     .item .circle-step-number{
         border-radius: 50px;
@@ -87,9 +91,12 @@
         line-height: 0;
     }
     #instructions .steps-container .column .step-description{
-        font-size: 14px;
+        font-size: 15px;
         line-height: 26px;
         width: 100%;
+    }
+    .item .circle-step-number{
+        transform: translateY(-80%)
     }
 }
 /* Phone */
@@ -107,7 +114,7 @@
         line-height: 28px;
     }
     #instructions .steps-container .column{
-        width: 100%;
+        width: 320px;
         letter-spacing: 0;
     }
     .item .circle-step-number{
@@ -122,9 +129,12 @@
         line-height: 0;
     }
     #instructions .steps-container .column .step-description{
-        font-size: 15px;
+        font-size: 17px;
         line-height: 26px;
         width: 100%;
+    }
+    .item .circle-step-number{
+        transform: translateY(-70%)
     }
 }
 /* Phone */
@@ -142,7 +152,7 @@
         line-height: 33px;
     }
     #instructions .steps-container .column{
-        width: 100%;
+        width: 340px;
         letter-spacing: 0;
     }
     .item .circle-step-number{
@@ -157,9 +167,12 @@
         line-height: 0;
     }
     #instructions .steps-container .column .step-description{
-        font-size: 15.9px;
+        font-size: 18px;
         line-height: 26px;
         width: 100%;
+    }
+    .item .circle-step-number{
+        transform: translateY(-70%)
     }
 }
 /* Phone */
@@ -177,7 +190,7 @@
         line-height: 33px;
     }
     #instructions .steps-container .column{
-        width: 100%;
+        width: 370px;
         letter-spacing: 0;
     }
     .item .circle-step-number{
@@ -192,9 +205,12 @@
         line-height: 0;
     }
     #instructions .steps-container .column .step-description{
-        font-size: 18px;
+        font-size: 19px;
         line-height: 26px;
         width: 100%;
+    }
+    .item .circle-step-number{
+        transform: translateY(-70%)
     }
 }
 /* Phone */
@@ -212,7 +228,7 @@
         line-height: 33px;
     }
     #instructions .steps-container .column{
-        width: 100%;
+        width: 370px;
         letter-spacing: 0;
     }
     .item .circle-step-number{
@@ -227,9 +243,12 @@
         line-height: 0;
     }
     #instructions .steps-container .column .step-description{
-        font-size: 18px;
+        font-size: 19px;
         line-height: 26px;
         width: 100%;
+    }
+    .item .circle-step-number{
+        transform: translateY(-70%)
     }
 }
 /* Tablet */
@@ -252,6 +271,9 @@
         font-size: 15px;
         line-height: 26px;
         width: 100%;
+    }
+    .item .circle-step-number{
+        transform: translateY(-40%)
     }
 }
 /* Ipad Pro */
