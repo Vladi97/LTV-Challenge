@@ -16,6 +16,9 @@
 }
 /* Phone */
 @media (min-width: 320px) and (max-width: 480px) {
+    #footer{
+        display: block;
+    }
     #footer .about{
         width: 90%;
         font-size: 17px;
