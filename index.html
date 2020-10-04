@@ -4,25 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LTV Challenge</title>
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/search.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="icon" href="./assets/PNGs/Logo@2x-icon.png">
 </head>
 <body>
-    <div class="header">
-        <div class="logo"><img src="./assets/PNGs/Logo@2x.png" alt="Logo"></div>
-        <div class="user-items">
-            <img src="./assets/PNGs/icn_search@2x.png" alt="Logo">
-            <img src="./assets/PNGs/icn_person@2x.png" width="23px" alt="Logo">
+    <div id="page-conteiner">
+        <div id="header" class="col-12 col-m-12 col-s-12">
+            <div class="logo"><img src="./assets/PNGs/Logo@2x.png" alt="Logo"></div>
+            <div class="user-items">
+                <img src="./assets/PNGs/icn_search@2x.png" alt="Logo">
+                <img src="./assets/PNGs/icn_person@2x.png" width="23px" alt="Logo">
+            </div>
         </div>
-    </div>
-    <div class="footer">
-        <div class="footer-info">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
-        <div class="footer-links">
-            <a href="#">Terms</a>
-             | 
-            <a href="#">Privacy</a>
+        <div id="search" class="col-12 col-m-12 col-s-12">
+            <div class="title-search-container">
+                <h1 class="white-text title">Search Any Email Address</h1>
+                <p class="white-text subtitle"><b class="yellow-text bold">Start Here</b> - Look up the owner's name, photos and online profiles. See what you find!</p>
+            </div>
+            <div class="form-search-container">
+                <input placeholder="EMAIL" class="white-bg bold search-input" type="email">
+                <button class="blue-text search-button yellow-bg bold">GO!</button>
+            </div>
+            <div class="message-label-container">
+                <p class="icon"><img src="./assets/SVGs/lock.svg" alt="Lock icon"></p>
+                <p class="yellow-text bold label-message">Enter Any Email Address. They won't be notified.</p>        
+            </div>
         </div>
     </div>
 </body>

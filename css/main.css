@@ -1,4 +1,5 @@
-.header{
+ /*General*/
+ .header{
     height: 65px;
     width: 100%;
     background-color: #004A80;
@@ -6,12 +7,62 @@
 body{
     padding: 0;
     margin: 0;
+    font-family: Helvetica;
 }
+.title{
+    font-size: 45px;
+    width: 90.6%;
+    margin-left: 4.7%;
+    margin-top: 0;
+}
+.center{
+    text-align: center;
+}
+.bold{
+    font-weight: bold;
+}
+.icon{
+    margin: auto;
+}
+.vertical-centered{
+    vertical-align: middle;
+    text-align: center;
+}
+.subtitle{
+    width: 100%;
+    font-size: 18px;
+    font-weight: normal;
+}
+.justify{
+    text-align: justify;
+}
+.info-tag{
+    width: 100%;
+    font-size: 16px;
+}
+/*Colors*/
+.white-text{
+    color: white;
+}
+.blue-text{
+    color: #004A80;;
+}
+.yellow-text{
+    color: #F6BC25;
+}
+.white-bg{
+    background-color: white;
+}
+.blue-bg{
+    background-color: #004A80;;
+}
+.yellow-bg{
+    background-color: #F6BC25;
+}
+/*Header*/
 .logo{
-    padding-left: 15%;
-    width: 50%;
-    float: left;
-    height: 25px;
+    width: 12%;
+    height: 2%;
 }
 .logo img{
     height: 25px;
@@ -19,8 +70,6 @@ body{
 }
 .user-items{
     float: right;
-    width: 5;
-    padding-right: 15%;
 }
 .user-items img{
     width: 23px;
@@ -30,15 +79,39 @@ body{
 .user-items img:first-child{
     margin-right: 25px;
 }
-.footer{
-    height: 68px;
-    width: 100%;
+/*Search*/
+#search{
+    padding: 0;
+    margin: 0;
+    height: 402px;
+    height: 350px;
+    background-color: #004A80;
+    text-align: center;
 }
-.footer-info{
-    width: 85%;
+.search-input{
+    border: none;
+    height: 60px;
+    width: 700px;
+    font-size: 14px;
+    line-height: 18px;
+    padding-left: 10px;
+    border-radius: 3px;
+    color: black;
 }
-.footer-links{
-    width: 15%;
+.search-input::placeholder{
+    color:  #9B9B9B;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+.search-button{
+    border: none;
+    margin-left: 10px;
+    height: 60px;
+    width: 180px;
+    background-image: linear-gradient(225deg, #F2DA56 0%, #F6BC25 100%);
+    box-shadow: 0 3px 0 0 #A6953B, inset 0 1px 0 0 #FFFFFF;
+    border-radius: 6px;
+    font-size: 22px;
 }
 /* Phone */
 @media (min-width: 320px) and (max-width: 480px) {
@@ -47,6 +120,43 @@ body{
     }
     .user-items{
         padding-right: 5%;
+    }
+    #search{
+        width: 100%;
+        height: 371px;
+    }
+    .search-input{
+        height: 60px;
+        width: 80%;
+        font-size: 14px;
+        line-height: 18px;
+        margin-left: 10%;
+        float: left;
+    }
+    .search-button{
+        height: 60px;
+        width: 83.5%;
+        margin-left: 4%;
+        margin-top: 10px;
+        line-height: 18px;
+    }
+    #search{
+        height: 500px;
+    }
+    #search .title{
+        font-size: 39px;
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+    #search .subtitle{
+        width: 94%;
+        font-size: 18px;
+        margin-left: 3%;
+    }
+    .info-tag{
+        width: 80%;
+        font-size: 14px;
+        margin-left: 37px;
     }
 }
 /* Tablet */
@@ -57,13 +167,96 @@ body{
     .user-items{
         padding-right: 2%;
     }
+    #search{
+        width: 100%;
+        height: 372px;
+    }
+    .search-input{
+        height: 60px;
+        width: 65%;
+        font-size: 14px;
+        line-height: 18px;
+        margin-left: 5%;
+        float: left;
+    }
+    .search-button{
+        float: left;
+        height: 60px;
+        width: 23%;
+        margin-left: 3%;
+        line-height: 18px;
+    }
+    /*
+    #search{
+        height: 500px;
+    }*/
+    .subtitle{
+        width: 90%;
+        margin-left: 5%;
+        font-size: 20px;
+    }
+    .info-tag{
+        width: 100%;
+        font-size: 14px;
+        margin-top: 30px;
+        white-space: pre-line;
+    }
+    .info-tag:before{
+        content: "\A";
+    }
 }
 /* Desktop */
 @media (min-width: 1024px) {
     .logo{
-        padding-left: 15%;
+        padding-left: 17%;
     }
     .user-items{
-        padding-right: 15%;
+        padding-right: 17%;
+    }
+}
+/*Ipad pro*/
+@media only screen 
+  and (min-width: 1024px) 
+  and (max-height: 1366px) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+    .logo{
+        padding-left: 3%;
+    }
+    .user-items{
+        padding-right: 3%;
+    }
+    #search .title{
+        font-size: 65px;
+    }
+    #search .subtitle{
+        font-size: 26px;
+    }
+}
+
+/* Portrait */
+@media only screen 
+  and (min-width: 1024px) 
+  and (max-height: 1366px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+    .logo{
+        padding-left: 3%;
+    }
+    .user-items{
+        padding-right: 3%;
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-width: 1024px) 
+  and (max-height: 1366px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+    .logo{
+        padding-left: 3%;
+    }
+    .user-items{
+        padding-right: 3%;
     }
 }
