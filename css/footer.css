@@ -1,0 +1,69 @@
+#footer .about{
+    width: 70%;
+    font-size: 15px;
+    margin-left: 7%;
+    float: left;
+    line-height: 20px;
+    color: #999999;
+}
+#footer .links{
+    width: 14%;
+    float: left;
+    font-size: 14px;
+}
+#footer .links a{
+    text-decoration: none;
+}
+/* Phone */
+@media (min-width: 320px) and (max-width: 480px) {
+    #footer .about{
+        width: 90%;
+        font-size: 17px;
+    }
+    #footer .links{
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+    }
+}
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px), (min-width: 481px) and (max-width: 767px), (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    #footer .about{
+        width: 70%;
+        font-size: 14.5px;
+        margin-left: 5%;
+        float: inline-start;
+    }
+    #footer .links{
+        width: 18%;
+        float: left;
+        font-size: 14px;
+    }
+}
+/* Ipad Pro */
+@media only screen 
+  and (min-width: 1024px) 
+  and (max-height: 1366px) 
+  and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen 
+  and (min-width: 1024px) 
+  and (max-height: 1366px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen 
+  and (min-width: 1024px) 
+  and (max-height: 1366px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+    #footer .about{
+        width: 69%;
+        font-size: 18.5px;
+        margin-left: 7%;
+        float: inline-start;
+    }
+    #footer .links{
+        width: 18%;
+        float: left;
+        font-size: 14px;
+    }
+}
