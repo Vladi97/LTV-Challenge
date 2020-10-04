@@ -22,10 +22,10 @@
 /* Phone */
 @media (min-width: 320px) and (max-width: 480px) {
     .logo{
-        padding-left: 7%;
+        padding-left: 5%;
     }
     .user-items{
-        padding-right: 7%;
+        padding-right: 5%;
     }
     .user-items img:first-child{
         margin-right: 15px;
