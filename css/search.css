@@ -309,3 +309,19 @@
         margin-bottom: 6%;
     }
 }
+@media only screen and (min-width: 1919px) {
+    .search-inputs .search-input:focus ~ .floating-label,
+    .search-inputs .search-input:not(:focus):valid ~ .floating-label{
+        transform: translateY(-15px);
+        font-size: 12px;
+        padding-left: 3px;
+    }
+}
+@media only screen and (min-width: 1080px) and (max-width: 1920px) {
+    .search-inputs .search-input:focus ~ .floating-label,
+    .search-inputs .search-input:not(:focus):valid ~ .floating-label{
+        transform: translateY(-75px);
+        font-size: 12px;
+        padding-left: 3px;
+    }
+}
