@@ -22,6 +22,17 @@
     border-radius: 30px;
     border-radius: 30px;
 }
+.result-container-data.not-result h2{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.result-container-data.not-result{
+    margin-bottom: 2%;
+}
+.result-container-data h2{
+    text-align: center;
+    width: 100%;
+}
 .profile-picture{
     width: 10%;
     margin-left: 4%;
