@@ -28,9 +28,13 @@
                     photos and online profiles. See what you find!</p>
             </div>
             <div class="form-search-container">
-                <input required name="email" id="email" class="white-bg search-input" type="email"/>
-                <label class="email-label" for="email">EMAIL</label>
-                <button type="button" id="search-button" class="blue-text search-button yellow-bg bold">GO!</button>
+                <div class="search-inputs">
+                    <input placeholder="" value="" required name="email" id="email" class="white-bg search-input" type="email"/>
+                    <span class="floating-label">EMAIL</span>
+                </div>
+                <div class="search-button-container">
+                    <button type="button" id="search-button" class="blue-text search-button yellow-bg bold">GO!</button>
+                </div>
             </div>
             <div class="message-label-container">
                 <p class="icon"><img src="./assets/SVGs/lock.svg" alt="Lock icon"></p>
@@ -117,6 +121,7 @@
             </div>
         </div>
     </div>
+    <script src="./js/search.js"></script>
     <script src="./js/email-finder.js"></script>
 </body>
 </html>

@@ -10,42 +10,69 @@
 }
 #search .subtitle{
     font-size: 22px;
-    margin-left: 13.5%;
+    margin-left: 12.8%;
 }
 .form-search-container{
-    width: 85%;
-    margin-left: 8%;
+    width: 73%;
+    margin-left: 10%;
+    display: flex;
 }
-.form-search-container .email-label{
-    height: 60x;
-    position: absolute;
-    left: 18.6%;
-    font-weight: bold;
-    letter-spacing: 2px;
-    color:  #9B9B9B;
-    font-size: 12px;
-    margin-top: 35px;
+.search-inputs{
+    float: left;
+    width: 72%;
+    margin-left: 10%;
+	position: relative;
 }
-.search-input{
-    border: none;
-    height: 60px;
-    width: 60%;
+/**/
+.search-inputs .search-input{
+	width: 97%;
+	outline: none;
+	border:none;
+ 	box-shadow: none !important;
+    height: 62px;
     font-size: 16px;
-    padding-left: 15px;
+    padding-left: 16px;
     border-radius: 3px;
     color: black;
-    margin-left: 11%;
     outline: none;
     line-height: 27px;
 }
-.search-input:focus{
+.search-inputs .search-input::placeholder{
+	color: white;
+}
+.search-inputs .floating-label {
+	position: absolute;
+	pointer-events: none;
+	padding-top: 25px;
+	left: 15px;
+	transition: 0.2s ease all;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color:  #9B9B9B;
+}
+.search-inputs .search-input:focus ~ .floating-label,
+.search-inputs .search-input:not(:focus):valid ~ .floating-label{
+    transform: translateY(-80px);
+    font-size: 12px;
+    padding-left: 4px;
+}
+/*.search-inputs .search-input:not(:placeholder-shown):invalid ~ .floating-label{
+    content: 'Please add a valid email address';
+    color: #DC0015;
+}*/
+/**/
+.search-button-container{
+    float: left;
+    width: 15%;
+    margin-left: 2%;
+}
+.search-input:focus, 
+.search-inputs .search-input:valid{
     border-color: #F6BC25;
     border-style: groove;
     border-width: 2px;
-}
-.search-input:focus + .email-label{
-    transform: translateY(-100%);
-    left: 18.6%;
+    padding-top: 18px;
+    height: 42px;
 }
 .search-button{
     border: none;
@@ -55,9 +82,7 @@
     box-shadow: 0 3px 0 0 #A6953B, inset 0 1px 0 0 #FFFFFF;
     border-radius: 6px;
     font-size: 22px;
-    width: 15%;
-    margin-left: 1%;
-    margin-top: 2px;
+    width: 100%;
 }
 .search-button:hover{
     background: #F2DA56;
@@ -83,12 +108,38 @@
     margin-bottom: 7%;
     font-size: 15px;
 }
+/*IE*/
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .search-inputs .search-input:focus ~ .floating-label,
+    .search-inputs .search-input:not(:focus):valid ~ .floating-label{
+        transform: translateY(-15px);
+        font-size: 12px;
+        padding-left: 4px;
+    }
+}
+
 /* Phone */
 @media (min-width: 320px) and (max-width: 480px) {
     .title-search-container{
         width: 98%;
         margin-left: 1%;
         margin-top: 3%;
+    }
+    .form-search-container{
+        width: 87%;
+        margin-left: 0%;
+        display: inline-block;
+    }
+    .search-inputs .search-input:focus ~ .floating-label,
+    .search-inputs .search-input:not(:focus):valid ~ .floating-label{
+        transform: translateY(-10px);
+        font-size: 12px;
+        padding-left: 4px;
+    }
+    .search-inputs .floating-label {
+        left: 16px;
+        top: 1px;
+        float: left;
     }
     #search .title{
         text-align: center;
@@ -99,17 +150,26 @@
     }
     .search-input{
         margin-left: 2%;
-        width: 93.5%;
+        width: 80%;
     }
     .search-button{
         margin-left: 2%;
         width: 98%;
         margin-top: 5%;
     }
+    .search-inputs{
+        float: none;
+        width: 89%;
+    }
+    .search-button-container{
+        float: none;
+        width: 95%;
+        margin-left: 10%;
+    }
     #search .subtitle{
         text-align: justify;
         width: 84%;
-        margin-left: 8%;
+        margin-left: 8.5%;
         margin-right: 8%;
         font-size: 18px;
         text-align-last: center;
@@ -147,17 +207,35 @@
         font-size: 19.5px;
         text-align-last: center;
     }
+    .search-inputs .search-input:focus ~ .floating-label,
+    .search-inputs .search-input:not(:focus):valid ~ .floating-label{
+        transform: translateY(-10px);
+        font-size: 12px;
+        padding-left: 3px;
+    }
+    .search-inputs .floating-label {
+        left: 16px;
+        top: 1px;
+        float: left;
+    }
+    .search-button-container{
+        width: 30%;
+    }
+    .search-inputs{
+        margin-left: 0%;
+        width: 68%;
+    }
     .form-search-container{
         margin-left: 5%;
         width: 90%;
     }
     .search-input{
         margin-left: 0%;
-        width: 67%;
+        width: 100%;
     }
     .search-button{
         margin-left: 2%;
-        width: 28%;
+        width: 100%;
     }
     #search .message-label-container{
         margin-left: 5%;
@@ -188,6 +266,31 @@
         width: 90%;
         margin-left: 1.8%;
         margin-top: 4%;
+    }
+    #search .subtitle{
+        width: 100%;
+        margin-left: 3%;
+        margin-right: 8%;
+        font-size: 19.5px;
+        text-align-last: center;
+    }
+    .search-inputs .search-input:focus ~ .floating-label,
+    .search-inputs .search-input:not(:focus):valid ~ .floating-label{
+        transform: translateY(-10px);
+        font-size: 12px;
+        padding-left: 3px;
+    }
+    .search-inputs .floating-label {
+        left: 16px;
+        top: 1px;
+        float: left;
+    }
+    .search-button-container{
+        width: 30%;
+    }
+    .search-inputs{
+        margin-left: 0%;
+        width: 68%;
     }
     #search .title{
         text-align: center;
