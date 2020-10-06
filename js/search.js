@@ -42,7 +42,7 @@ async function saveEmail(){
     if(value.match(mailformat)){
         sessionStorage.setItem('email-searched', value);
         window.location.href = '../pages/result.html'
-    }else{
+    }else if(value===''){
         window.location.href = '../pages/result.html'
     }
 }
