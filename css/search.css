@@ -43,15 +43,20 @@
 .search-inputs .floating-label {
 	position: absolute;
 	left: 15px;
-    padding-top: 14%;
+    padding-top: 4%;
     font-weight: bold;
     letter-spacing: 2px;
     color:  #9B9B9B;
 }
+.result-form .search-inputs .floating-label {
+	left: 15px;
+    padding-top: 2.5%;
+}
 .search-inputs .search-input:focus ~ .floating-label{
-    padding-top: 20px;
-    padding-left: 4px;
-	transition: 0.2s ease all;
+    top: 1px;
+    padding-top: 7px;
+    padding-left: 3px;
+    font-size: 16px;
 }
 .search-inputs .search-input:not(:focus):not(:placeholder-shown){
     padding-top: 12px;
@@ -60,12 +65,14 @@
     border-color: #F6BC25;
 }
 .search-inputs .search-input:not(:focus):not(:placeholder-shown) ~ .floating-label{
-    padding-top: 10px;
+    padding-top: 9px;
     padding-left: 2px;
-    font-size: 12px;
+    font-size: 16px;
 }
 .search-inputs .search-input:not(:focus):not(:placeholder-shown):valid ~ .floating-label{
-    padding-top: 20px;
+    top: 7px;
+    padding-top: 1px;
+    left: 15px;
 }
 .search-input:focus, 
 .search-inputs .search-input:focus:valid,
@@ -159,22 +166,33 @@
     }
     .search-inputs .search-input:focus ~ .floating-label,
     .search-inputs .search-input:not(:focus):valid ~ .floating-label{
-        transform: translateY(-10px);
+        top: 0px;
         font-size: 12px;
         padding-left: 4px;
     }
     .search-inputs .floating-label {
         left: 18px;
-        top: 1px;
+        top: 0px;
+        padding: 28px;
+        float: left;
+    }
+    .form-result .search-inputs .floating-label {
+        left: 18px;
+        top: 0px;
+        padding-top: 45px;
         float: left;
     }
     .search-inputs .search-input:focus:invalid ~ .floating-label,
     .search-inputs .search-input:not(:focus):not(:placeholder-shown):invalid ~ .floating-label{
         font-size: 10px;
         padding-left: 7px;
+        top: 0px;
+        padding-top: 7px;
+        font-size: 8px;
     }
     .search-inputs .search-input:not(:focus):not(:placeholder-shown):valid ~ .floating-label{
-        padding-top: 20px;
+        padding-top: 15px;
+        top: 0px;
         padding-left: 7px;
     }
     #search .title{
@@ -227,7 +245,8 @@
 @media (min-width: 375px) and (max-width: 410px) {
     .search-inputs .floating-label {
         left: 18px;
-        padding-top: 35px;
+        padding-top: 25px;
+        top: 0px;
         float: left;
     }
 }
@@ -235,7 +254,8 @@
 @media (min-width: 411px) and (max-width: 413px) {
     .search-inputs .floating-label {
         left: 18px;
-        padding-top: 35px;
+        top: 0px;
+        padding-top: 20px;
         float: left;
     }
 }
@@ -243,7 +263,8 @@
 @media (min-width: 414px) and (max-width: 420px) {
     .search-inputs .floating-label {
         left: 18px;
-        padding-top: 35px;
+        top: 0px;
+        padding-top: 25px;
         float: left;
     }
 }
@@ -269,21 +290,25 @@
     }
     .search-inputs .floating-label {
         left: 16px;
-        transform: translateY(-105px);
+        top: 0px;
+        padding-top: 25px;
         float: left;
     }
     .search-inputs .search-input:focus ~ .floating-label{
-        padding-top: 50px;
+        padding-top: 10px;
+        top: 0px;
         padding-left: 3px;
         transition: 0.2s ease all;
     }
     .search-inputs .search-input:not(:focus):not(:placeholder-shown):invalid ~ .floating-label{
-        top: 105px;
+        top: 0px;
+        padding-top: 10px;
         font-size: 16px;
         padding-left: 3px;
     }
     .search-inputs .search-input:not(:focus):not(:placeholder-shown):valid ~ .floating-label{
-        top: 95px;
+        top: 0px;
+        padding-top: 10px;
         font-size: 16px;
         padding-left: 3px;
     }
@@ -350,16 +375,28 @@
     }
     .search-inputs .floating-label {
         left: 16px;
-        top: 40px;
+        padding-top: 130px;
+        top: 0px;
         float: left;
     }
     .search-inputs .search-input:not(:focus):not(:placeholder-shown):invalid ~ .floating-label{
-        padding-top: 110px;
+        top: 0px;
+        padding-top: 118px;
         padding-left: 2px;
+        transition: none;
         font-size: 16px;
     }
     .search-inputs .search-input:not(:focus):not(:placeholder-shown):valid ~ .floating-label{
-        padding-top: 78px;
+        padding-top: 118px;
+        top: 0px;
+        padding-left: 2px;
+        left: 14px;
+        font-size: 16px;
+    }
+    .search-inputs .search-input:focus ~ .floating-label{
+        padding-top: 118px;
+        top: 0px;
+        padding-left: 2px;
         font-size: 16px;
     }
     .search-button-container{
@@ -384,21 +421,5 @@
     #search .message-label-container .icon{
         width: 3%;
         margin-bottom: 6%;
-    }
-}
-@media only screen and (min-width: 1919px) {
-    .search-inputs .search-input:focus ~ .floating-label,
-    .search-inputs .search-input:not(:focus):valid ~ .floating-label{
-        transform: translateY(-15px);
-        font-size: 12px;
-        padding-left: 3px;
-    }
-}
-@media only screen and (min-width: 1080px) and (max-width: 1920px) {
-    .search-inputs .search-input:focus ~ .floating-label,
-    .search-inputs .search-input:not(:focus):valid ~ .floating-label{
-        transform: translateY(-75px);
-        font-size: 12px;
-        padding-left: 3px;
     }
 }

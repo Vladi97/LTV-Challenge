@@ -8,8 +8,13 @@ async function loadSearchSection(){
     html += '<div class="title-search-container">'
     +'<h1 class="white-text title">'+data[0]+'</h1>'
     +'<p class="white-text subtitle"><b class="yellow-text bold">'+data[1]
-    +'</b> - '+data[2]+'</p></div><div class="form-search-container">'
-    +'<div class="search-inputs"><input placeholder="EMAIL" value="" name="email" '
+    +'</b> - '+data[2]+'</p></div>';
+    if(!url.includes('result.html')){
+        html += '<div class="form-search-container">';
+    }else{
+        html += '<div class="form-search-container result-form">';
+    }
+    html += '<div class="search-inputs"><input placeholder="EMAIL" value="" name="email" '
     +'id="email" class="white-bg search-input" type="email"/><span id="floating-label" class="floating-label">'
     +'EMAIL</span></div><div class="search-button-container"><button type="button" id="search-button"'
     +' class="blue-text search-button yellow-bg bold">GO!</button></div></div><div '

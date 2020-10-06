@@ -19,7 +19,7 @@ async function loadResult(){
 }
 function renderResult(result, email){
     var html = '';
-    var title ='Sorry, the email you\'ve searched for is not registered in our system!';
+    var title ='The email you\'ve searched for is not in our system!';
     if(email===''){
         title = 'Please type an email in the field bellow!';
     }
