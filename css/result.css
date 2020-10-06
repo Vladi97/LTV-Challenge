@@ -1,5 +1,6 @@
 #result{
     background-color: #F8F8F8;
+    min-width: 200px;
 }
 #result .subtitle{
     font-size: 22px;
@@ -21,6 +22,9 @@
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
     border-radius: 30px;
     border-radius: 30px;
+}
+.result-container-data p{
+    line-height: 10px;
 }
 .result-container-data.not-result h2{
     margin-top: 5%;
@@ -52,6 +56,7 @@
 }
 .profile-metadata{
     margin-left: 2%;
+    width: 100%;
 }
 .profile-metadata .name{
     font-size: 28px;
@@ -63,8 +68,9 @@
     width: 93%;
 }
 .metadata-values{
-    width: 90%;
     display: flex;
+    width: 100%;
+    padding-bottom: 3%;
 }
 .metadata-values .column{
     width: 50%;
@@ -72,6 +78,7 @@
 }
 .metadata-values .column.right{
     padding-left: 10%;
+    width: 40%;
 }
 /* Phone */
 @media (min-width: 320px) and (max-width: 480px) {
@@ -80,7 +87,10 @@
         text-align: left;
         margin: 5%;
     }
-    .metadata-values .column{
+    .result-container-data h2{
+        font-size: 16px;
+    }
+    .metadata-values .column, .metadata-values .column.right{
         width: 100%;
         float: none;
     }
@@ -117,26 +127,6 @@
         font-size: 18px;
         margin: 7%;
     }
-}
-/* Phone */
-@media (min-width: 320px) and (max-width: 359px) {
-    
-}
-/* Phone */
-@media (min-width: 360px) and (max-width: 374px) {
-    
-}
-/* Phone */
-@media (min-width: 375px) and (max-width: 410px) {
-    
-}
-/* Phone */
-@media (min-width: 411px) and (max-width: 413px) {
-    
-}
-/* Phone */
-@media (min-width: 414px) and (max-width: 420px) {
-    
 }
 /* Tablet */
 @media (min-width: 768px) and (max-width: 1024px), (min-width: 481px) and (max-width: 767px), (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {

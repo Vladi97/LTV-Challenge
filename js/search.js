@@ -9,7 +9,7 @@ async function loadSearchSection(){
     +'<h1 class="white-text title">'+data[0]+'</h1>'
     +'<p class="white-text subtitle"><b class="yellow-text bold">'+data[1]
     +'</b> - '+data[2]+'</p></div><div class="form-search-container">'
-    +'<div class="search-inputs"><input placeholder="" value="" name="email" '
+    +'<div class="search-inputs"><input placeholder="EMAIL" value="" name="email" '
     +'id="email" class="white-bg search-input" type="email"/><span id="floating-label" class="floating-label">'
     +'EMAIL</span></div><div class="search-button-container"><button type="button" id="search-button"'
     +' class="blue-text search-button yellow-bg bold">GO!</button></div></div><div '
@@ -17,7 +17,6 @@ async function loadSearchSection(){
     +'</p><p class="yellow-text bold label-message">Enter Any Email Address. They won\'t be notified.</p></div>';
     document.getElementById('search').innerHTML = html;
 }
-
 function getData(url){
     var data = [];
     if(url.includes('result')){
@@ -32,17 +31,38 @@ function getData(url){
     return data;
 }
 loadSearchSection();
-
 async function saveEmail(){
     var value = document.getElementById('email').value;
     var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     if(value.match(mailformat)){
-        debugger
         sessionStorage.setItem('email-searched', value);
-        console.log(sessionStorage.getItem('email-searched'));
         window.location.href = '../pages/result.html'
     }else{
         window.location.href = '../pages/result.html'
     }
 }
+function changeLabelText(){
+    debugger
+    var label = document.getElementById('email');
+    var value = label.value;
+    if(value!==''){
+        if(value.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)){
+            label.innerHTML = 'Please add a valid email address'
+        }else{
+            label.innerHTML = 'EMAIL'
+        }
+    }
+}
+document.getElementById('email').addEventListener('input', (event) => {
+    var label = document.getElementById('floating-label');
+    if(event.target.value!==''){
+        if(event.target.value.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)){
+            label.innerHTML = 'EMAIL'
+        }else{
+            label.innerHTML = 'Please add a valid email address'
+        }
+    }else{
+        label.innerHTML = 'EMAIL'
+    }
+});
 document.getElementById('search-button').addEventListener('click', saveEmail, false);

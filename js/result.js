@@ -1,7 +1,6 @@
 async function loadResult(){
     var email = sessionStorage.getItem('email-searched');
     sessionStorage.setItem('email-searched', '');
-    debugger
     var result = await fetch('https://cors-anywhere.herokuapp.com/https://ltv-data-api.herokuapp.com/api/v1/records.json?email='+email, 
     {
         headers: {
@@ -14,19 +13,16 @@ async function loadResult(){
         return response.json();
     })
     .catch(function(err) {
-        //return 'Sorry, the email you\'ve searched for is not registered in our system!';
         return [];
     });
     renderResult(result, email);
 }
-
 function renderResult(result, email){
     var html = '';
     var title ='Sorry, the email you\'ve searched for is not registered in our system!';
     if(email===''){
         title = 'Please type an email in the field bellow!';
     }
-    debugger
     if(Object.keys(result).length === 0){
         html = '<div class="title-result-container col-8 offset-2 col-m-12 offset-m-0 col-s-12 offset-s-0">'
         +'<br><h1 class="blue-text title bold">Result</h1><p class="center subtitle">Look at the result below to'
@@ -45,13 +41,14 @@ function renderResult(result, email){
         +result.email+'</p></div><div class="column right"><p class="blue-text"><strong>Phone Numbers</strong></p>';
         var phonesLength = result.phone_numbers.length;
         for(var i = 0; i<phonesLength; i++){
-            html += '<p class="data">'+result.phone_numbers[i]+'</p>';
+            html += '<a href="'+result.phone_numbers[i]+'">'+result.phone_numbers[i]+'</a><br>';
         }
-        html += '<p class="blue-text"><strong>Relatives</strong></p></div><br><br></div></div></div><br></div><br>';
+        html += '<p class="blue-text"><strong>Relatives</strong></p>';
         var relativesLength = result.relatives.length;
         for(var i = 0; i<relativesLength; i++){
             html += '<p class="data">'+result.relatives[i]+'</p>';
         }
+        html += '</div><br><br></div></div></div><br></div>';
     }
     document.getElementById('result').innerHTML = html;
 }

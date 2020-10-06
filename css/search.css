@@ -30,7 +30,7 @@
 	border:none;
  	box-shadow: none !important;
     height: 62px;
-    font-size: 16px;
+    font-size: 18px;
     padding-left: 16px;
     border-radius: 3px;
     color: black;
@@ -38,41 +38,68 @@
     line-height: 27px;
 }
 .search-inputs .search-input::placeholder{
-	color: white;
+    color: white;
 }
 .search-inputs .floating-label {
 	position: absolute;
-	pointer-events: none;
-	padding-top: 25px;
 	left: 15px;
-	transition: 0.2s ease all;
+    padding-top: 14%;
     font-weight: bold;
     letter-spacing: 2px;
     color:  #9B9B9B;
 }
-.search-inputs .search-input:focus ~ .floating-label,
-.search-inputs .search-input:not(:focus):valid ~ .floating-label{
-    transform: translateY(-80px);
-    font-size: 12px;
+.search-inputs .search-input:focus ~ .floating-label{
+    padding-top: 20px;
     padding-left: 4px;
+	transition: 0.2s ease all;
 }
-/*.search-inputs .search-input:not(:placeholder-shown):invalid ~ .floating-label{
-    content: 'Please add a valid email address';
+.search-inputs .search-input:not(:focus):not(:placeholder-shown){
+    padding-top: 12px;
+    height: 50px;
+	transition: 0.2s ease all;
+    border-color: #F6BC25;
+}
+.search-inputs .search-input:not(:focus):not(:placeholder-shown) ~ .floating-label{
+    padding-top: 10px;
+    padding-left: 2px;
+    font-size: 12px;
+}
+.search-inputs .search-input:not(:focus):not(:placeholder-shown):valid ~ .floating-label{
+    padding-top: 20px;
+}
+.search-input:focus, 
+.search-inputs .search-input:focus:valid,
+.search-inputs .search-input:not(:focus):not(:placeholder-shown):valid{
+    border-color: #F6BC25;
+    border-style: groove;
+    border-width: 2px;
+    background-color: white;
+    padding-top: 18px;
+    height: 42px;
+}
+.search-inputs .search-input:not(:focus):not(:placeholder-shown):invalid ~ .floating-label{
+    top: 3px;
+    padding-left: 3px;
+}
+.search-inputs .search-input:focus:invalid,
+.search-inputs .search-input:not(:focus):not(:placeholder-shown):invalid{
+    border-color: #DC0015;
+    border-style: groove;
+    border-width: 2px;
+    background-color: white;
+    padding-top: 18px;
+    height: 42px;
+}
+.search-inputs .search-input:focus:invalid ~ .floating-label,
+.search-inputs .search-input:not(:focus):not(:placeholder-shown):invalid ~ .floating-label{
     color: #DC0015;
-}*/
+	transition: none;
+}
 /**/
 .search-button-container{
     float: left;
     width: 15%;
     margin-left: 2%;
-}
-.search-input:focus, 
-.search-inputs .search-input:valid{
-    border-color: #F6BC25;
-    border-style: groove;
-    border-width: 2px;
-    padding-top: 18px;
-    height: 42px;
 }
 .search-button{
     border: none;
@@ -137,9 +164,18 @@
         padding-left: 4px;
     }
     .search-inputs .floating-label {
-        left: 16px;
+        left: 18px;
         top: 1px;
         float: left;
+    }
+    .search-inputs .search-input:focus:invalid ~ .floating-label,
+    .search-inputs .search-input:not(:focus):not(:placeholder-shown):invalid ~ .floating-label{
+        font-size: 10px;
+        padding-left: 7px;
+    }
+    .search-inputs .search-input:not(:focus):not(:placeholder-shown):valid ~ .floating-label{
+        padding-top: 20px;
+        padding-left: 7px;
     }
     #search .title{
         text-align: center;
@@ -187,6 +223,30 @@
         transform: translateY(-70%);
     }
 }
+/* Phone */
+@media (min-width: 375px) and (max-width: 410px) {
+    .search-inputs .floating-label {
+        left: 18px;
+        padding-top: 35px;
+        float: left;
+    }
+}
+/*Phone*/
+@media (min-width: 411px) and (max-width: 413px) {
+    .search-inputs .floating-label {
+        left: 18px;
+        padding-top: 35px;
+        float: left;
+    }
+}
+/* Phone */
+@media (min-width: 414px) and (max-width: 420px) {
+    .search-inputs .floating-label {
+        left: 18px;
+        padding-top: 35px;
+        float: left;
+    }
+}
 /* Tablet */
 @media (min-width: 768px) and (max-width: 1024px), (min-width: 481px) and (max-width: 767px), (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     .title-search-container{
@@ -207,16 +267,25 @@
         font-size: 19.5px;
         text-align-last: center;
     }
-    .search-inputs .search-input:focus ~ .floating-label,
-    .search-inputs .search-input:not(:focus):valid ~ .floating-label{
-        transform: translateY(-10px);
-        font-size: 12px;
-        padding-left: 3px;
-    }
     .search-inputs .floating-label {
         left: 16px;
-        top: 1px;
+        transform: translateY(-105px);
         float: left;
+    }
+    .search-inputs .search-input:focus ~ .floating-label{
+        padding-top: 50px;
+        padding-left: 3px;
+        transition: 0.2s ease all;
+    }
+    .search-inputs .search-input:not(:focus):not(:placeholder-shown):invalid ~ .floating-label{
+        top: 105px;
+        font-size: 16px;
+        padding-left: 3px;
+    }
+    .search-inputs .search-input:not(:focus):not(:placeholder-shown):valid ~ .floating-label{
+        top: 95px;
+        font-size: 16px;
+        padding-left: 3px;
     }
     .search-button-container{
         width: 30%;
@@ -274,16 +343,24 @@
         font-size: 19.5px;
         text-align-last: center;
     }
-    .search-inputs .search-input:focus ~ .floating-label,
-    .search-inputs .search-input:not(:focus):valid ~ .floating-label{
-        transform: translateY(-10px);
-        font-size: 12px;
-        padding-left: 3px;
+    .search-inputs .search-input:focus ~ .floating-label{
+        padding-top: 75px;
+        padding-left: 2px;
+        transition: 0.2s ease all;
     }
     .search-inputs .floating-label {
         left: 16px;
-        top: 1px;
+        top: 40px;
         float: left;
+    }
+    .search-inputs .search-input:not(:focus):not(:placeholder-shown):invalid ~ .floating-label{
+        padding-top: 110px;
+        padding-left: 2px;
+        font-size: 16px;
+    }
+    .search-inputs .search-input:not(:focus):not(:placeholder-shown):valid ~ .floating-label{
+        padding-top: 78px;
+        font-size: 16px;
     }
     .search-button-container{
         width: 30%;
